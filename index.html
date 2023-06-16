@@ -70,7 +70,7 @@
 						<img src="img/main/13.svg" alt="">
 						<img src="img/main/14.svg" alt="">
 					</div>
-					<div>
+					<div aria-hidden="true">
 						<img src="img/main/1.svg" alt="">
 						<img src="img/main/2.svg" alt="">
 						<img src="img/main/3.svg" alt="">
@@ -372,7 +372,7 @@
 									<p>
 										2 600 000 ₽
 									</p>
-									<b>
+									<b data-popup="popup1">
 										Характеристики
 									</b>
 								</div>								
@@ -393,7 +393,7 @@
 									<p>
 										2 740 000 ₽
 									</p>
-									<b>
+									<b data-popup="popup1">
 										Характеристики
 									</b>
 								</div>								
@@ -403,17 +403,26 @@
 
 						
 					</div>
-					<div class="products__body empty" id="tab2">		
-						<div class="products__card products__card-empty">
+					<div class="products__body" id="tab2">		
+						<div class="products__card">
 							<div class="products__wrap">
 								<div class="products__image">
-									<img src="img/products/2.svg" alt="">
+									<img src="img/products/iphone1.png" alt="">
+									<img src="img/products/iphone1.png" alt="">
+									<img src="img/products/iphone1.png" alt="">
 								</div>
 								<div class="products__name">
-									Если Вы не нашли нужный товар в  наличиии, пожалуйста, оставьте заявку на интересующий вас товар!
+									Apple iPhone 13
+								</div>
+								<div class="products__info">
+									<p>
+										от 78 000 ₽
+									</p>
+									<b data-popup="popup2">
+										Характеристики
+									</b>
 								</div>								
 							</div>
-
 							<a href="#form" class="products__button button"><span>Оставить заявку</span></a>
 						</div>
 					</div>
@@ -481,7 +490,7 @@
 									<label for="formcheck2"><span></span>Написать в WhatsApp</label>
 								</div>
 							</div>
-							<input type="tel" placeholder="+7(___) ___-__-__">
+							<input type="tel" placeholder="+7 (___) ___-__-__">
 						</div>
 						<button class="form__button button">Оставить заявку</button>
 					</div>
@@ -537,9 +546,12 @@
 				</div>
 			</footer>
 		</div>
-		<div class="popup">
+		<div class="popup popup1">		
 			<div class="popup__close"></div>
 			<div class="popup__content">
+				<div class="popup__x">
+					<img src="img/products/x.svg" alt="">
+				</div>
 				<img src="img/products/xmobile.svg" alt="" class="popup__x">
 				<div class="popup__image">
 
@@ -550,8 +562,7 @@
 					<img src="img/products/popup5.jpg" alt="">
 					<img src="img/products/popup6.jpg" alt="">
 				</div>
-				<div class="popup__body">
-					<img src="img/products/x.svg" alt="" class="popup__x">
+				<div class="popup__body">			
 					<div class="popup__wrap">
 						<div class="popup__row">
 							<p>
@@ -615,6 +626,107 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="popup-gadgets popup2">		
+			<div class="popup-gadgets__close"></div>
+			<div class="popup-gadgets__content">
+				<div class="popup-gadgets__x">
+					<img src="img/products/x.svg" alt="">
+				</div>
+				<img src="img/products/xmobile.svg" alt="" class="popup-gadgets__x">
+				<div class="popup-gadgets__image">
+					<div class="popup-gadgets__slider">
+						<div>
+							<img src="img/products/iphone2.png" alt="">
+						</div>
+						
+						<div><img src="img/products/iphone3.png" alt=""></div>
+						<div><img src="img/products/iphone4.png" alt=""></div>
+					</div>
+					<div class="popup-gadgets__navslider">
+						<div>
+							<img src="img/products/iphone2.png" alt="">
+						</div>
+						<div>
+							<img src="img/products/iphone3.png" alt="">
+						</div>
+						<div>
+							<img src="img/products/iphone4.png" alt="">
+						</div>					
+					</div>					
+				</div>
+				<div class="popup-gadgets__body">	
+					<div class="popup-gadgets__name">
+						Apple iPhone 13
+					</div>
+					<div class="popup-gadgets__row">
+						<p>
+							Цвет:
+						</p>
+						<div class="popup-gadgets__color">
+							<div class="popup-gadgets__colorpick">
+								<input checked type="radio" name="colorpick" id="color1">
+								<label for="color1"><span></span></label>
+							</div>
+							<div class="popup-gadgets__colorpick">
+								<input type="radio" name="colorpick" id="color2">
+								<label for="color2"><span style="background:#FADDD7;"></span></label>
+							</div>
+							<div class="popup-gadgets__colorpick">
+								<input type="radio" name="colorpick" id="color3">
+								<label for="color3"><span style="background:#276888;"></span></label>
+							</div>
+							<div class="popup-gadgets__colorpick">
+								<input type="radio" name="colorpick" id="color4">
+								<label for="color4"><span style="background:#232A32;"></span></label>
+							</div>
+							<div class="popup-gadgets__colorpick">
+								<input type="radio" name="colorpick" id="color5">
+								<label for="color5"><span style="background:#FAF7F2;"></span></label>
+							</div>
+							<div class="popup-gadgets__colorpick">
+								<input type="radio" name="colorpick" id="color6">
+								<label for="color6"><span style="background:#BE0014;"></span></label>
+							</div>
+						</div>
+					</div>
+					<div class="popup-gadgets__row">
+						<p>
+							HDD:
+						</p>
+						<div class="popup-gadgets__hdd">
+							<div class="popup-gadgets__hddpick">
+								<input checked type="radio" name="hdd" id="hdd1">
+								<label for="hdd1"><span>128 Гб</span></label>
+							</div>
+							<div class="popup-gadgets__hddpick">
+								<input type="radio" name="hdd" id="hdd2">
+								<label for="hdd2"><span>256 Гб</span></label>
+							</div>
+							<div class="popup-gadgets__hddpick">
+								<input type="radio" name="hdd" id="hdd3">
+								<label for="hdd3"><span>512 Гб</span></label>
+							</div>
+							<div class="popup-gadgets__hddpick">
+								<input type="radio" name="hdd" id="hdd4">
+								<label for="hdd4"><span>1 Тб</span></label>
+							</div>
+						</div>						
+					</div>
+					<p>
+						<b>78 000 ₽</b>
+						<span>
+							*Цена на товары указана за наличный расчет
+						</span>
+					</p>		
+					<input type="text" placeholder="Ваше имя">
+					<input type="tel" placeholder="+7 (___) ___-__-__">
+					<button class="popup-gadgets__button button"><span>Оставить заявку</span></button>					
+
+				</div>
+			</div>
+		</div>	
+			
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/dynamicAdapt.js"></script>  
 		<script src="js/maskinput.js"></script>  

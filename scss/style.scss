@@ -376,23 +376,35 @@ body{
     border-left:0;
     border-right:0;
     padding: 20px 0;
+    --gap: 50px;
+    overflow: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    gap: var(--gap);
+
     &>div{
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      white-space: nowrap;
-      flex-wrap:nowrap;
-      & img{
-        margin: 0 30px;
-      }
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      min-width: 100%;
+      gap: var(--gap);
+      -webkit-animation: scroll 30s linear infinite;
+              animation: scroll 30s linear infinite;
     }
     @media(max-width: 1140px){
       padding: 17px 0;
       height: 60px;
+      --gap: 32px;
       &>div{
         height: 100%;
         & img{
           height: 100%;
-          margin: 0 16.5px;
         }
       }
     }
@@ -408,20 +420,25 @@ body{
     }    
   }
 }
-@keyframes marquee1 {
+@-webkit-keyframes scroll {
   from {
-            transform: translateX(100%);
-  }
-  to {
-            transform: translateX(-100%);
-  }
-}
-@keyframes marquee2 {
-  from {
+    -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   to {
-            transform: translateX(-200%);
+    -webkit-transform: translateX(calc(-100% - var(--gap)));
+            transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes scroll {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(calc(-100% - var(--gap)));
+            transform: translateX(calc(-100% - var(--gap)));
   }
 }
 .title {
